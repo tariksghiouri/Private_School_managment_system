@@ -51,7 +51,12 @@ public class Student {
                 "\n -- unpaid Fees:"+ getFees_Unpaid()+"\n");
     }
 
-    private int getFees_Unpaid() {
+    public int getFees_Unpaid() {
         return getFees_total()-getFees_paid();
+    }
+
+    public void payFees(int feesPayment) {
+        this.fees_paid+=feesPayment;
+        School.AddToMoneyIn(feesPayment);
     }
 }

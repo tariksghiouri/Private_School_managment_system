@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class School {
    private ArrayList<Teacher> teachers;
    private ArrayList<Student> students;
-   private int moneyIn;
-   private int moneyOut;
+   private static int schoolmoney;
 
     public ArrayList<Teacher> getTeachers() {
         return teachers;
@@ -23,27 +22,22 @@ public class School {
         this.students.add(student);
     }
 
-    public int getMoneyIn() {
-        return moneyIn;
+    public static int getSchoolmoney() {
+        return schoolmoney;
     }
 
-    public void AddToMoneyIn(int moneyIn) {
-        this.moneyIn = moneyIn;
+    public static void AddToMoneyIn(int amount) {
+        schoolmoney +=amount;
+    }
+    public static void AddToMoneyOut(int amount) {
+        schoolmoney -=amount;
     }
 
-    public int getMoneyOut() {
-        return moneyOut;
-    }
-
-    public void AddToMoneyOut(int moneyOut) {
-    moneyIn-=moneyOut;
-    }
 
     public School(ArrayList<Teacher> teachers, ArrayList<Student> students) {
         this.teachers = teachers;
         this.students = students;
-        this.moneyIn = 0;
-        this.moneyOut = 0;
+        schoolmoney = 0;
     }
     public void displayStudents(){
         System.out.println(students);

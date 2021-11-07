@@ -3,7 +3,13 @@ package school.managment;
 public class Teacher {
     private int id;
     private String FullName;
-    private int salary;
+    private  int salary;
+
+    public int getAllPayments() {
+        return allPayments;
+    }
+
+    private  int allPayments;
 
     public int getId() {
         return id;
@@ -20,6 +26,10 @@ public class Teacher {
     public int getSalary() {
         return salary;
     }
+    public void pay(int amount){
+        this.allPayments+=amount;
+        School.AddToMoneyOut(amount);
+    }
 
     public Teacher(int id, String fullName, int salary) {
         this.id = id;
@@ -30,6 +40,7 @@ public class Teacher {
     public String toString() {
         return ("\n -- name:"+this.getFullName()+
                 "\n -- ID: "+ this.getId() +
-                "\n -- salary : " + this.getSalary()+"\nx___________________\n");
+                "\n -- salary : " + this.getSalary()+
+                "\n -_ overall this teacher has made "+this.getAllPayments()+"\n");
 }
 }
