@@ -26,4 +26,10 @@ public class Teacher {
         FullName = fullName;
         this.salary = salary;
     }
+    @Override
+    public String toString() {
+        return ("name:"+this.getFullName()+
+                " ID: "+ this.getId() +
+                " salary : " + this.getSalary());
+}
 }
