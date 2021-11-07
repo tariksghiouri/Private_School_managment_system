@@ -40,7 +40,18 @@ public class Student {
         this.name = name;
         this.grade = grade;
         this.fees_paid = fees_paid;
-        //every new student has to pay 100000 mad
-        this.fees_total = 100000;
+        //every new student has to pay 10000 mad
+        this.fees_total = 10000;
+    }
+    @Override
+    public String toString() {
+        return ("\n -- name:"+this.getName()+
+                "\n -- ID: "+ this.getId() +
+                "\n -- grade : " + this.getGrade()+
+                "\n -- unpaid Fees:"+ getFees_Unpaid()+"\n");
+    }
+
+    private int getFees_Unpaid() {
+        return getFees_total()-getFees_paid();
     }
 }

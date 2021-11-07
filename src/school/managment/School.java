@@ -39,11 +39,11 @@ public class School {
     moneyIn-=moneyOut;
     }
 
-    public School(ArrayList<Teacher> teachers, ArrayList<Student> students, int moneyIn, int moneyOut) {
+    public School(ArrayList<Teacher> teachers, ArrayList<Student> students) {
         this.teachers = teachers;
         this.students = students;
-        this.moneyIn = moneyIn;
-        this.moneyOut = moneyOut;
+        this.moneyIn = 0;
+        this.moneyOut = 0;
     }
     public void displayStudents(){
         System.out.println(students);
