@@ -28,8 +28,8 @@ public class Teacher {
     }
     @Override
     public String toString() {
-        return ("name:"+this.getFullName()+
-                " ID: "+ this.getId() +
-                " salary : " + this.getSalary());
+        return ("\n -- name:"+this.getFullName()+
+                "\n -- ID: "+ this.getId() +
+                "\n -- salary : " + this.getSalary()+"\nx___________________\n");
 }
 }

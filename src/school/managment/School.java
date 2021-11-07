@@ -11,15 +11,14 @@ public class School {
     public ArrayList<Teacher> getTeachers() {
         return teachers;
     }
-
-    public void addTeacher(Teacher teacher) {
-        this.teachers.add(teacher);
-    }
-
     public ArrayList<Student> getStudents() {
         return students;
     }
-
+    //get the list of teachers
+    public void addTeacher(Teacher teacher) {
+        this.teachers.add(teacher);
+    }
+    //get the list of Students
     public void addStudent(Student student) {
         this.students.add(student);
     }
@@ -28,7 +27,7 @@ public class School {
         return moneyIn;
     }
 
-    public void setMoneyIn(int moneyIn) {
+    public void AddToMoneyIn(int moneyIn) {
         this.moneyIn = moneyIn;
     }
 
@@ -36,8 +35,8 @@ public class School {
         return moneyOut;
     }
 
-    public void setMoneyOut(int moneyOut) {
-        this.moneyOut = moneyOut;
+    public void AddToMoneyOut(int moneyOut) {
+    moneyIn-=moneyOut;
     }
 
     public School(ArrayList<Teacher> teachers, ArrayList<Student> students, int moneyIn, int moneyOut) {
